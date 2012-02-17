@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_id: MyString
+  order_date: 2012-02-17 16:16:59
+  order_amt: 1.5
+  order_status: MyString
+  payment_mode: MyString
+  mil_tx_id: MyString
+  order_desc: MyString
+  borrower_id: 1
+  borrower_name: MyString
+  cust_name: MyString
+  cust_email: MyString
+  cust_phone: MyString
+  cust_addr: MyText
+
+two:
+  order_id: MyString
+  order_date: 2012-02-17 16:16:59
+  order_amt: 1.5
+  order_status: MyString
+  payment_mode: MyString
+  mil_tx_id: MyString
+  order_desc: MyString
+  borrower_id: 1
+  borrower_name: MyString
+  cust_name: MyString
+  cust_email: MyString
+  cust_phone: MyString
+  cust_addr: MyText

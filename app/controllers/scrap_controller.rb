@@ -1,0 +1,2 @@
+class ScrapController < ApplicationController
+end
