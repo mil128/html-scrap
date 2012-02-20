@@ -49,6 +49,8 @@ class ScrapsController < ApplicationController
     
     fail=0
     count=0
+    total=0
+    skipped=0
 
     html_doc.xpath("//html/body/table/tr").each do |node|
 
@@ -61,6 +63,12 @@ class ScrapsController < ApplicationController
       if(arr[0]=="Order ID")
         next
       else
+        temp_scr = Scrap.find_by_order_id_and_order_date(arr[0],DateTime.parse(arr[1]))
+        if temp_scr != null
+          
+        end
+
+
         scr = Scrap.new
         scr.order_id = arr[0]
         scr.order_date = DateTime.parse(arr[1])
@@ -76,11 +84,11 @@ class ScrapsController < ApplicationController
         scr.cust_phone = arr[11]
         scr.cust_addr = arr[12]
 
-       if scr.save
-         count = count+1
-       else
-         fail = fail+1
-       end
+        if scr.save
+          count = count+1
+        else
+          fail = fail+1
+        end
         
       end
       
