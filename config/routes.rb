@@ -1,4 +1,14 @@
 HtmlScrap::Application.routes.draw do
+
+root :to => "scraps#index"
+
+resources :scraps do
+  collection do
+    get "upload"
+    post "process_url"
+  end
+end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

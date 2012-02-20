@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120217105751) do
+ActiveRecord::Schema.define(:version => 20120217120812) do
 
   create_table "scraps", :force => true do |t|
     t.string   "order_id"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(:version => 20120217105751) do
     t.string   "cust_email"
     t.string   "cust_phone"
     t.text     "cust_addr"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.datetime "from_date"
     t.datetime "to_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<h3>Records Stored</h3>
+<table>
+  <tr>
+    <th>Order ID</th>
+    <th>Order Name</th>
+    <th>Order Amount</th>
+  </tr>
+  <% for scrap in @scraps %>
+    <tr>
+      <td><%= scrap.order_id%> </td>
+      <td><%= scrap.order_date %></td>
+      <td><%= scrap.order_amt %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Upload from url",upload_scraps_path %>

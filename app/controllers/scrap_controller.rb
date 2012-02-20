@@ -1,2 +1,0 @@
-class ScrapController < ApplicationController
-end

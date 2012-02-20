@@ -14,6 +14,8 @@ class CreateScraps < ActiveRecord::Migration
       t.string :cust_email
       t.string :cust_phone
       t.text :cust_addr
+      t.datetime :from_date
+      t.datetime :to_date
 
       t.timestamps
     end
