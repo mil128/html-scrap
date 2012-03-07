@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 <h3>Records Stored</h3>
-<%= link_to "Upload from url",upload_scraps_path %> 
+<% if @scraps == [] %>
+  <%= link_to "Upload from url",upload_scraps_path %>
+<% end %>
 <table>
   <tr>
     <th>Order ID</th>
@@ -12,6 +14,7 @@
       <td><%= scrap.order_id%> </td>
       <td><%= scrap.order_date %></td>
       <td><%= scrap.order_amt %></td>
+      <td><%= link_to "Details", scrap %></td>
     </tr>
   <% end %>
 </table>

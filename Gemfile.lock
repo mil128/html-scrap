@@ -30,6 +30,8 @@ GEM
     activesupport (3.0.10)
     arel (2.0.10)
     builder (2.1.2)
+    composite_primary_keys (3.0.9)
+      activerecord (>= 3.0.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
@@ -76,6 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  composite_primary_keys (~> 3.0.0.b2)
   mysql2 (~> 0.2.11)
   nifty-generators
   nokogiri

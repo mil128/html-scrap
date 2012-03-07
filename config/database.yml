@@ -12,7 +12,7 @@ development:
   database: html-scrap_development
   pool: 5
   username: root
-  password: anubha
+  password: puneet123
   socket: /var/lib/mysql/mysql.sock
 
 

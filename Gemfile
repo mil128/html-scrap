@@ -8,6 +8,7 @@ gem 'rails', '3.0.10'
 gem 'mysql2', '~> 0.2.11'
 gem 'nokogiri'
 gem 'nifty-generators'
+gem "composite_primary_keys", "~> 3.0.0.b2"
 # Use unicorn as the web server
 # gem 'unicorn'
 
