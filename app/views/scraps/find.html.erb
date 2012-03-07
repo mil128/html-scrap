@@ -1,0 +1,52 @@
+<p<%= notice %></p>
+<table>
+  <%= form_tag(:controller=>"scraps",:action=>"find",:method=>"post") do %>
+    <tr>
+      <td>
+        Start Date&nbsp;(yy/mm/dd)
+      </td>
+      <td>
+        <%= text_field_tag(:start_date) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        End Date&nbsp;(yy/mm/dd)
+      </td>
+      <td>
+        <%= text_field_tag(:end_date) %>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><%= submit_tag("Submit") %></td>
+    </tr>
+  <% end %>
+</table>
+<hr/>
+
+<% if @scraps.blank? %>
+  <div style="color:red;">There is No data to be displayed, kindly select a date range.</div>
+<% else %>
+  <table cellpadding="10px" cellspacing="10px" border="2px" >
+
+    <tr>
+      <th>Order ID</th>
+      <th>Order Status</th>
+      <th>Payment Mode</th>
+      <th>Mil Tx ID</th>
+      <th>Details</th>
+    </tr>
+
+    <% @scraps.each do |scrap|  %>
+      <tr>
+        <td><%= scrap.order_id %></td>
+        <td><%= scrap.order_status %></td>
+        <td><%= scrap.payment_mode %></td>
+        <td><%= scrap.mil_tx_id %> </td>
+        <td><%= link_to "Details",scrap %></td>
+      </tr>
+    <% end %>
+
+  </table>
+<% end %>

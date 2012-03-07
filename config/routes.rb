@@ -1,10 +1,11 @@
 HtmlScrap::Application.routes.draw do
 
-root :to => "scraps#index"
+root :to => "scraps#find"
 
 resources :scraps do
   collection do
-    get "upload"
+    get "find"
+    post "find"
     post "process_url"
   end
 end

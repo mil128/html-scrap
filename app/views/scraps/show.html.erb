@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
-
+<p<%= notice %></p>
+<p><%= link_to "Back", :controller => 'scraps', :action => 'find'%></p>
 <p>
   <strong>Order ID:</strong>
   <%= @scrap.order_id %>
@@ -51,14 +51,6 @@
 <p>
   <strong>Customer Address:</strong>
   <%= @scrap.cust_addr %>
-</p>
-<p>
-  <strong>From Date:</strong>
-  <%= @scrap.from_date %>
-</p>
-<p>
-  <strong>To Date:</strong>
-  <%= @scrap.to_date %>
 </p>
 <p>
   <strong>Created on:</strong>
