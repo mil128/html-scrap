@@ -35,9 +35,12 @@ class ScrapsController < ApplicationController
         begin
           @start_date = Date.parse(params[:start_date])
           @end_date = Date.parse(params[:end_date])
+          if @start_date > @end_date
+            raise StandardError,"Date Range is Invalid"
+          end
           @scraps=Scrap.where(:order_date => @start_date..@end_date)
         rescue StandardError => ex
-          flash.now[:error]="Invalid Dates"
+          flash.now[:error]= ex.message
         end
       end
     end
